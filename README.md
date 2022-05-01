@@ -11,7 +11,7 @@ BOP Project beginning with the effect of CO2 is attracked to people.
 Typical outdoor CO2 concentrations are around 400 ppm. The onset CO2 concentration is 1500 ppm. Concentrations tend to be higher in confined structures without adequate ventilation. High carbon dioxide levels may be an indicator of pollution levels in other buildings. is also higher This is an indication that the building is not properly ventilated. Carbon dioxide concentrations also affect the human brain and overall health.  
 
 Today's places like schools, cars, gyms, offices, conference rooms and many bedrooms have high levels of carbon dioxide that can affect health. but was ignored is the reason why with a point for Leads to the project with the solution is to turn on the ventilation fans and windows automatically to allow better ventilation
-## Schrematic
+## Schematic
 
 ![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
