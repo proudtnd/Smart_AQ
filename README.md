@@ -13,7 +13,7 @@ Typical outdoor CO2 concentrations are around 400 ppm. The onset CO2 concentrati
 Today's places like schools, cars, gyms, offices, conference rooms and many bedrooms have high levels of carbon dioxide that can affect health. but was ignored is the reason why with a point for Leads to the project with the solution is to turn on the ventilation fans and windows automatically to allow better ventilation
 ## Schematic
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](https://drive.google.com/uc?id=1V1xxo0J63jnR276fRCmtA_x_NWQEMmpQ)
 
 
 ## Requirements 
@@ -33,6 +33,10 @@ Today's places like schools, cars, gyms, offices, conference rooms and many bedr
 - R 1kohm x 3		
 - Breadboard Power Module x 1
 - 9V to DC Jack × 1 	
+
+## Block Diagram
+
+![App Screenshot](https://drive.google.com/uc?id=1XsZ-aRSsmGlqFX2gG-zl8xnHxjhQGNlp)
 
 ## Description 
 - matrix keypad : use only 4 keypad
@@ -54,6 +58,8 @@ Today's places like schools, cars, gyms, offices, conference rooms and many bedr
 - LCD 
     - show data of Temperature `T`, Humidity `H`, CO2 `Co2`
     - show date & real time
+- Buzzer
+    - alarm : Co2 more than 1500 ppm
 
 ## Installation
 
