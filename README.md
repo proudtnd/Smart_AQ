@@ -61,7 +61,7 @@ Today's places like schools, cars, gyms, offices, conference rooms and many bedr
 - Buzzer
     - alarm : Co2 more than 1500 ppm
 - Youtube
-    - https://youtu.be/XjEAqnqs564
+    - https://youtu.be/RPQEwtwqhdA
 
 ## Installation
 
