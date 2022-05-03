@@ -76,7 +76,6 @@ Before start, you need to install these library
 
 ## Documentation
 
-- [Documentation](https://chula-my.sharepoint.com/:w:/g/personal/6230119421_student_chula_ac_th/Eah6DzH_ddNJkr9HPgWd708B72IubvLaZnxf17QXFqra7g?e=Snuh4c)
 - [Presentation](https://chula-my.sharepoint.com/:p:/g/personal/6230120021_student_chula_ac_th/EcZ22_chKKNGp9o3xPuj_REBImm6OBJb0dHGD-T_uJeJyA?rtime=2yKNU8ss2kg)
 
 
