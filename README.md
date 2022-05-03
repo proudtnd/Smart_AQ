@@ -6,7 +6,7 @@ This is for final Embedded Project in Chulalongkorn University
 
 ## About this Project
 
-BOP Project beginning with the effect of CO2 is attracked to people.
+Smart AQ Project beginning with the effect of CO2 is attracked to people.
 
 Typical outdoor CO2 concentrations are around 400 ppm. The onset CO2 concentration is 1500 ppm. Concentrations tend to be higher in confined structures without adequate ventilation. High carbon dioxide levels may be an indicator of pollution levels in other buildings. is also higher This is an indication that the building is not properly ventilated. Carbon dioxide concentrations also affect the human brain and overall health.  
 
