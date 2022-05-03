@@ -19,9 +19,9 @@ DS3231  rtc(SDA, SCL);
 Time T;
 
 int MQ_RESISTOR = 1000;
-long RO = 13143;
-float MINRSRO = 0.358;
-float MAXRSRO = 2.428;
+long RO = 12143;
+float MINRSRO = 0.358; // max co2 2004
+float MAXRSRO = 2.428; // min co2 
 float a = 116.602;
 float b = -2.769;
 int ppm = 0;
@@ -74,7 +74,7 @@ void setup()
   digitalWrite(AUTOLEDPIN, HIGH);
   keypadAlto = true;
   // set time 
-  rtc.setTime(11, 59, 00);
+//  rtc.setTime(14, 25, 00);
 }
 // ------------------------------------------------------ function --------------------------------------------------------------
 // function when we have interrupt from keypad
@@ -116,21 +116,23 @@ void man_all() {
   digitalWrite(AUTOLEDPIN, LOW);
   Serial.print("IN all");
   delay(1000);
-  state3 = !state3;
-  digitalWrite(FANLEDPIN, state3);
-  digitalWrite(WINLEDPIN, state3);
+  state3 = !state3;  
   stateam = LOW;
   if (state3 == HIGH){
     digitalWrite(RELAYPIN, LOW);
+    digitalWrite(WINLEDPIN, HIGH);
+    digitalWrite(FANLEDPIN, HIGH);
     myservo.write(myservo.read());
     delay(1000);
     myservo.write(180);        
   }
   else if(state3 == LOW){
     digitalWrite(RELAYPIN, HIGH);
+    digitalWrite(WINLEDPIN, LOW);
+    digitalWrite(FANLEDPIN, LOW);
     myservo.write(myservo.read());
     delay(1000);
-    myservo.write(90);    // sets the servo at 180 degree position    
+    myservo.write(90);      
   }
 }
 // select manual[led off] or auto[led on]
@@ -172,13 +174,11 @@ void read_co2(){
   float RS = ((1024.0*MQ_RESISTOR)/ADCRAW) - MQ_RESISTOR;
   Serial.print("Rs: ");
   Serial.println(RS);
-  
   float RSRO = RS/RO;
   Serial.print("Rs/Ro: ");
   Serial.println(RSRO);
-  
-  if(RSRO < MAXRSRO && RSRO > MINRSRO) {
-   ppm = a*pow(RS/RO, b);
+  if(RSRO <= MAXRSRO && RSRO >= MINRSRO) {
+   ppm = a*pow(RSRO, b);
    Serial.print("CO2 : ");
    Serial.print(ppm);
    Serial.println(" ppm");
@@ -214,7 +214,6 @@ void RGB_color(int red_light_value, int green_light_value, int blue_light_value)
 // all control in mode auto
 void control()
 { 
-//  ppm = 1200; for assume ppm 
   if (stateam == HIGH and stateRTC == false){
     if (ppm >= 1500 and statebuz == false){
       statebuz = true;
@@ -232,10 +231,10 @@ void control()
     }
     else if (ppm < 1500 and ppm >= 1000){ // close win , open fan
       statebuz = false;
-      RGB_color(255, 255, 125);
+      RGB_color(255, 128, 0);
       digitalWrite(RELAYPIN, LOW);
-      state1 = LOW;   //fan
-      state2 = HIGH;  // window
+      state1 = HIGH;   //fan
+      state2 = LOW;  // window
       myservo.write(myservo.read());
       delay(1000);
       myservo.write(90);
